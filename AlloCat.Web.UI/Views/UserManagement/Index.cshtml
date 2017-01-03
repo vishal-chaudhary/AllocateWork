@@ -1,0 +1,332 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html class="gt-ie8 gt-ie9 not-ie pxajs" ng-app="demo">
+<!--<![endif]-->
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Allocat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    <script>
+        angular.module('demo', [])
+        .controller('DemoCtrl', function ($scope) {
+            $scope.users = [
+             { full_name: 'Abhinav Rao', user_name: 'User1', user_email: 'user1@gmail.com', user_number: '1234567890', department: 'System', user_role: 'Fulfillment Manager, Inventory Manager', status: 'Active', action: 'Modify' }
+            , { full_name: 'Aditya Shrivastava', user_name: 'User2', user_email: 'user2@gmail.com', user_number: '1234567890', department: 'Hospital', user_role: 'Fulfillment Manager', status: 'Inactive', action: 'Modify' }
+            , { full_name: 'Amita Sachan', user_name: 'User3', user_email: 'user3@gmail.com', user_number: '1234567890', department: 'Tissue Bank', user_role: 'Product Manager, Inventory Manager', status: 'Inactive', action: 'Modify' }
+            , { full_name: 'Sindhu', user_name: 'User4', user_email: 'user4@gmail.com', user_number: '1234567890', department: 'hospital', user_role: 'Product Manager', status: 'Active', action: 'Modify' }
+            ]
+            console.log($scope.users)
+            $scope.editMode = false;
+            $scope.change = function () {
+                $scope.editMode = !$scope.editMode;
+            };
+        });
+
+
+
+    </script>
+
+
+    <link href="https://gitcdn.github.io/angular-bootstrap-toggle/{version}/dist/angular-bootstrap-toggle.min.css"
+          rel="stylesheet">
+    <script src="https://gitcdn.github.io/bootstrap-toggle/{version}/dist/angular-bootstrap-toggle.min.js"></script>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/pixel-admin.min.css" rel="stylesheet" type="text/css">
+    <link href="css/widgets.min.css" rel="stylesheet" type="text/css">
+    <link href="css/rtl.min.css" rel="stylesheet" type="text/css">
+    <link href="css/themes.min.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <style>
+        #sel {
+            -moz-appearance: none;
+            -webkit-appearance: none;
+        }
+
+            #sel::-ms-expand {
+                display: none;
+            }
+    </style>
+
+    <style>
+    table {
+        width: 100%;
+    }
+
+    
+
+    </style>
+
+
+</head>
+
+<!-- $BODY ============================================================================  -->
+<body class="theme-default main-menu-animated animate-mm-sm animate-mm-md animate-mm-lg" ng-controller="DemoCtrl">
+    <div id="main-wrapper">
+        <!-- $MAIN_NAVIGATION =================================================================  -->
+        <div id="main-navbar" class="navbar navbar-inverse" role="navigation">
+            <!-- Main menu toggle -->
+            <button type="button" id="main-menu-toggle"><i class="navbar-icon fa fa-bars icon"></i><span class="hide-menu-text">HIDE MENU</span></button>
+            <div class="navbar-inner">
+                <!-- Main navbar header -->
+                <div class="navbar-header">
+                    <a href="#" class="navbar-brand"><img src="images/logo.png"></img></a>
+                    <!-- Main navbar toggle -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar-collapse"><i class="navbar-icon fa fa-bars"></i></button>
+                </div> <!-- / .navbar-header -->
+                <div id="main-navbar-collapse" class="collapse navbar-collapse main-navbar-collapse">
+                    <div>
+                        <ul class="nav navbar-nav">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Products</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul> <!-- / .navbar-nav -->
+                        <div class="right clearfix" id="nav">
+                            <ul class="nav navbar-nav pull-right right-navbar-nav">
+                                <!-- $NAVBAR_ICON_BUTTONS ================================================= -->
+                                <li class="nav-icon-btn nav-icon-btn-danger dropdown">
+                                    <a href="#notifications" class="dropdown-toggle" data-toggle="dropdown">
+                                        <span class="label">2</span>
+                                        <i class="nav-icon fa fa-bullhorn"></i><span class="small-screen-text">Notifications</span>
+                                    </a>
+                                    <!-- Javascript -->
+                                    <!-- / Javascript -->
+                                    <div class="dropdown-menu widget-notifications no-padding" id="notification">
+                                        <div class="slimScrollDiv">
+                                            <div class="notifications-list" id="main-navbar-notifications">
+                                                <div class="notification">
+                                                    <div class="notification-description"><a href="send_RFQ.htm">You have got new Request for Quote</a></div>
+                                                    <div class="notification-ago">12h ago</div>
+                                                    <div class="notification-icon fa fa-history bg-default"></div>
+                                                </div>
+                                                <div class="notification">
+                                                    <div class="notification-description"><a href="send_RFQ.htm">You have got new Purchase Order</a></div>
+                                                    <div class="notification-ago">12h ago</div>
+                                                    <div class="notification-icon fa fa-history bg-default"></div>
+                                                </div>
+                                            </div>
+                                            <div class="slimScrollBar"></div>
+                                            <div class="slimScrollRail"></div>
+                                        </div> <!-- / .notifications-list -->
+                                        <a href="#" class="notifications-link">MORE NOTIFICATIONS</a>
+                                    </div> <!-- / .dropdown-menu -->
+                                </li>
+                                <!-- $END_NAVBAR_ICON_BUTTONS -->
+
+                                <li class="nav-icon-btn nav-icon-btn-danger dropdown">
+                                    <a href="#notifications" class="dropdown-toggle" data-toggle="dropdown">
+                                        <i class="nav-icon fa fa-cog"></i><span class="small-screen-text">Setting</span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-user"></i>&nbsp;&nbsp;My Profile</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#"><i class="dropdown-icon fa fa-cog"></i>&nbsp;&nbsp;Account Settings</a></li>
+                                        <li><a href="manage_profile.htm"><i class="dropdown-icon fa fa-user-plus"></i>&nbsp;&nbsp;User Management</a></li>
+                                        <li><a href="#"><i class="dropdown-icon fa fa-power-off"></i>&nbsp;&nbsp;Log Out</a></li>
+                                    </ul>
+                                </li>
+
+                            </ul> <!-- / .navbar-nav -->
+                        </div> <!-- / .right -->
+                    </div>
+                </div> <!-- / #main-navbar-collapse -->
+            </div> <!-- / .navbar-inner -->
+        </div> <!-- / #main-navbar -->
+        <!-- $END_MAIN_NAVIGATION -->
+        <!-- $MAIN_MENU ========================================================================  -->
+        <div id="main-menu" role="navigation">
+            <div style="height: 100%;" class="slimScrollDiv">
+                <div id="main-menu-inner">
+                    <div class="menu-content top animated fadeIn" id="menu-content-demo">
+                        <div>
+                            <div class="text-bg"><i class="fa fa-user fa-lg" aria-hidden="true" style="padding-right:5px;"></i>  <span class="text-slim">Welcome,</span> <span class="text-semibold">Tissue Bank</span></div>
+                        </div>
+                    </div>
+                    <ul class="navigation">
+                        <li class=" active">
+                            <a href="home.html"><i class="menu-icon fa fa-dashboard"></i><span class="mm-text mmc-dropdown-delay animated fadeIn">Dashboard</span></a>
+                        </li>
+                        <li class="mm-dropdown mm-dropdown-root">
+                            <a href="#"><i class="menu-icon fa fa-th"></i><span class="mm-text mmc-dropdown-delay animated fadeIn">Reports Panel</span></a>
+                            <ul class="mmc-dropdown-delay animated fadeInLeft">
+                                <li>
+                                    <a tabindex="-1" href="RFQ.htm"><span class="mm-text">RFQ</span></a>
+                                </li>
+                                <li>
+                                    <a tabindex="-1" href="PO.htm"><span class="mm-text">Purchase Order</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="display_products.htm"><i class="menu-icon fa fa-th"></i><span class="mm-text mmc-dropdown-delay animated fadeIn">Product Management</span></a>
+                        </li>
+                    </ul> <!-- / .navigation -->
+                </div>
+                <div class="slimScrollBar"></div>
+                <div class="slimScrollRail"></div>
+            </div> <!-- / #main-menu-inner -->
+        </div> <!-- / #main-menu -->
+        <!-- /. $MAIN_MENU -->
+
+        <div id="content-wrapper">
+            <ul class="breadcrumb breadcrumb-page">
+                <div class="breadcrumb-label text-light-gray">You are here: </div>
+                <li><a href="#">Home</a></li>
+                <li class="active"><a href="#">User Management</a></li>
+            </ul>
+            <div class="page-header">
+                <div class="row">
+                    <!-- Page header, center on small screens -->
+                    <h1 class="col-xs-12 col-sm-4 text-center text-left-sm"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;Manage Profile</h1>
+                </div>
+            </div> <!-- / .page-header -->
+
+            <div style="text-align:center; margin-bottom:30px; margin-top:30px;">
+                <h4>Company Details: Allocat International (Company) </h4>
+            </div>
+
+            <!-- $FILTER_SEARCH ==================================================================  -->
+            <div class="panel colourable" id="filter" style="width:80%; margin:auto">
+                <div class="panel-body panel-padding">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <select class="form-control form-group-margin" style="height:28px; display:inline-block; background-color:#eee; width:30%">
+                                <option>All</option>
+                                <option>Hospital</option>
+                                <option>Tissue Bank</option>
+                            </select>
+                            <select class="form-control form-group-margin" id="sel" style="height:28px; display:inline-block; position:absolute; width:65%">
+                                <option></option>
+                                <option>Columbia Asia</option>
+                                <option>McDuffie Medicla Center</option>
+                                <option>Mayo Clinic Health System</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4" style="margin-bottom:15px">
+                            <input class="form-control form-group-margin" type="text" style="height:26px; width:70%" placeholder="Search User Name" onfocus="this.placeholder=''" onblur="this.placeholder='Search User Name'" />
+                        </div>
+                        <div class="col-md-2">
+                            <button class="btn btn-primary btn-flat" style="width:100px; height: 30px;">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.$FILTER_SEARCH ==================================================================  -->
+            <!-- $BORDERED_TABLES ==================================================================  -->
+
+
+            <div class="panel-body" style="margin-top:20px;">
+                <div style="display:inline-block">
+                    <b>Per Page:</b> <select>
+                        <option>10</option>
+                        <option>10</option>
+                        <option>10</option>
+                    </select>
+                </div>
+                <div style="display:inline-block; float:right">
+                    <a href="add_user.htm"><button class="btn btn-flat"><span class="fa fa-user-plus"></span> Add User</button></a>
+                </div>
+            </div>
+
+
+            <div class="panel">
+                <div class="panel-body">
+                    <table class="table table-primary table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Full Name</th>
+                                <th>User Name</th>
+                                <th id="c6">User Email</th>
+                                <th id="c5">User Number</th>
+                                <th id="c4">Department</th>
+                                <th id="c3">User Role</th>
+                                <th id="c2">Status</th>
+                                <th id="c1">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat-start="user in users">
+                                <td>
+                                    <button class="icn" ng-if="user.expanded" ng-click="user.expanded = false" style="background-color:red; color:#ffffff; border-color:#ffffff; border-radius:5px">-</button>
+                                    <button class="icn" ng-if="!user.expanded" ng-click="user.expanded = true" style="background-color:green; color:#ffffff; border-color:#ffffff; border-radius:5px">+</button>
+                                    {{user.full_name}}
+                                </td>
+                                <td>{{user.user_name}}</td>
+                                <td id="c6">{{user.user_email}}</td>
+                                <td id="c5">{{user.user_number}}</td>
+                                <td id="c4">{{user.department}}</td>
+                                <td id="c3">{{user.user_role}}</td>
+                                <td id="c2">{{user.status}}</td>
+                                <td id="c1"><a href="edit_profile.htm"><u>{{user.action}}</u></a></td>
+                            </tr>
+
+                            <tr ng-if="user.expanded" ng-repeat-end="">
+                                <td colspan="7">
+                                    <div class="col-md-12" id="r1">
+                                        <b>Action : </b> {{user.action}}
+                                    </div>
+                                    <div class="col-md-12" id="r2">
+                                        <b>Status : </b> {{user.status}}
+                                    </div>
+                                    <div class="col-md-12" id="r3">
+                                        <b>User Role : </b> {{user.user_role}}
+                                    </div>
+                                    <div class="col-md-12" id="r4">
+                                        <b>Department : </b> {{user.department}}
+                                    </div>
+                                    <div class="col-md-12" id="r5">
+                                        <b>User Number : </b> {{user.user_number}}
+                                    </div>
+                                    <div class="col-md-12" id="r6">
+                                        <b>User Email : </b> {{user.user_email}}
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+            <!-- $BORDERED_TABLES -->
+
+            <toggle ng-model="toggleValue" ng-change="changed()" on="Enabled" off="Disabled"></toggle>
+
+            <!-- $PAGINATION_STATES ============================================================  -->
+            <div class="row pagination-demo">
+                <div class="col-sm-12">
+                    <ul class="pagination" style="float:right">
+                        <li class="disabled"><a href="#">«</a></li>
+                        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                        <li class="disabled"><a href="#">»</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /. $PAGINATION_STATES ============================================================  -->
+
+        </div>
+        <div id="main-menu-bg"></div>
+        <!-- javascripts -->
+
+        <script type="text/javascript" language="javascript" src="js/jquery-1.js"></script>
+        <script type="text/javascript" language="javascript" src="js/jquery_new.js"></script>
+        <script type="text/javascript" language="javascript" src="js/dataTables.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/pixel-admin.min.js"></script>
+        <script src="js/script.js"></script>
+
+</body>
+</html>
