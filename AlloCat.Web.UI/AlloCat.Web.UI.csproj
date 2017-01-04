@@ -111,7 +111,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Scripts\app\" />
     <Folder Include="Scripts\data\" />
   </ItemGroup>
   <ItemGroup>
@@ -147,6 +146,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\app\UserManagement\Controller\ManageProfileController.js" />
+    <Content Include="Scripts\app\UserManagement\Directive\alTest.js" />
+    <Content Include="Scripts\app\UserManagement\Service\UserManagementService.js" />
     <Content Include="Scripts\lib\angular-animate.js" />
     <Content Include="Scripts\lib\angular-cookies.js" />
     <Content Include="Scripts\lib\angular-loader.js" />
