@@ -12,7 +12,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Allocat</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
     <script>
         angular.module('demo', [])
@@ -82,7 +86,7 @@
             <div class="navbar-inner">
                 <!-- Main navbar header -->
                 <div class="navbar-header">
-                    <a href="#" class="navbar-brand"><img src="images/logo.png"></img></a>
+                    <a href="#" class="navbar-brand"><img src="~/Content/images/logo.png" /></a>
                     <!-- Main navbar toggle -->
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar-collapse"><i class="navbar-icon fa fa-bars"></i></button>
                 </div> <!-- / .navbar-header -->

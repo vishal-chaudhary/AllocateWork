@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -110,6 +111,8 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Scripts\app\" />
+    <Folder Include="Scripts\data\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -144,23 +147,34 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\bootstrap-toggle.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\lib\angular-animate.js" />
+    <Content Include="Scripts\lib\angular-cookies.js" />
+    <Content Include="Scripts\lib\angular-loader.js" />
+    <Content Include="Scripts\lib\angular-mocks.js" />
+    <Content Include="Scripts\lib\angular-resource.js" />
+    <Content Include="Scripts\lib\angular-route.js" />
+    <Content Include="Scripts\lib\angular-sanitize.js" />
+    <Content Include="Scripts\lib\angular.js" />
+    <Content Include="Scripts\lib\angular.min.js" />
+    <Content Include="Scripts\lib\bootstrap-toggle.js" />
+    <Content Include="Scripts\lib\bootstrap.js" />
+    <Content Include="Scripts\lib\bootstrap.min.js" />
     <Content Include="Content\icons\responsivenav.eot" />
     <Content Include="Content\icons\responsivenav.ttf" />
     <Content Include="Content\icons\responsivenav.woff" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\dataTables.js" />
+    <Content Include="Scripts\lib\errors.json" />
+    <Content Include="Scripts\lib\angular.min.js.map" />
+    <None Include="Scripts\lib\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\lib\dataTables.js" />
     <Content Include="Scripts\demo.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
-    <Content Include="Scripts\jquery-1.js" />
-    <Content Include="Scripts\jquery_new.js" />
-    <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\pixel-admin.min.js" />
-    <Content Include="Scripts\respond.js" />
-    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\lib\jquery-1.10.2.js" />
+    <Content Include="Scripts\lib\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\lib\jquery-1.js" />
+    <Content Include="Scripts\lib\jquery_new.js" />
+    <Content Include="Scripts\lib\modernizr-2.6.2.js" />
+    <Content Include="Scripts\lib\pixel-admin.min.js" />
+    <Content Include="Scripts\lib\respond.js" />
+    <Content Include="Scripts\lib\respond.min.js" />
     <Content Include="Scripts\script.js" />
     <Content Include="Scripts\testCtrl.js" />
     <Content Include="Scripts\_references.js" />
@@ -178,8 +192,9 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Scripts\lib\jquery-1.10.2.min.map" />
     <Content Include="Views\UserManagement\Index.cshtml" />
+    <Content Include="Scripts\lib\version.json" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
