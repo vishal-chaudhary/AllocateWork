@@ -12,6 +12,7 @@ namespace AlloCat.Web.UI.Controllers
         // GET: /UserManagement/
         public ActionResult Index()
         {
+            //edited by Satyanshu
             return View();
         }
 
